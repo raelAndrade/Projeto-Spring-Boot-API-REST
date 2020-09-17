@@ -2,8 +2,14 @@ package br.com.alura.forum;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cache.annotation.EnableCaching;
+import org.springframework.data.web.config.EnableSpringDataWebSupport;
 
 @SpringBootApplication
+// Com essa anotação habilitamos o suporte para o spring pegar da requisição dos parametros da url, os campos, as informações de paginação e ordenação e repassar isso para o spring data
+@EnableSpringDataWebSupport
+// Habilitar o uso de cache na aplicação
+@EnableCaching
 public class ForumApplication {
 
 	public static void main(String[] args) {

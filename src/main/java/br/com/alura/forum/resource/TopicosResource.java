@@ -78,7 +78,7 @@ public class TopicosResource {
 	
 	@PostMapping
 	@Transactional
-	@CacheEvict(value = "listaDeTopicos", allEntries = true)
+	@CacheEvict(value = "listaDeTopicos", allEntries = true) // Para que o Spring limpe determinado cache.
 	public ResponseEntity<TopicoDto> cadastrar(@RequestBody @Valid TopicoForm form, UriComponentsBuilder uriBuilder) {
 		Topico topico = form.converter(cursoRepository);
 		topicoRepository.save(topico);

@@ -35,6 +35,13 @@
 			<artifactId>spring-boot-starter-cache</artifactId>
 		</dependency>
 		
+		<!-- SEGURANÇA -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-security</artifactId>
+		</dependency>
+		
+		<!-- DATASOURCE -->
 		<dependency>
 			<groupId>com.h2database</groupId>
 			<artifactId>h2</artifactId>

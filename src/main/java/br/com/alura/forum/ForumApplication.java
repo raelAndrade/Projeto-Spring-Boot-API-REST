@@ -13,10 +13,17 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 // Habilitar o uso de cache na aplicação
 @EnableCaching
 @EnableSwagger2
+// Herdar a classe SpringBootServletInitializer e sobrescrever o método configure
+// public class ForumApplication extends SpringBootServletInitializer { 
 public class ForumApplication {
-
 	public static void main(String[] args) {
 		SpringApplication.run(ForumApplication.class, args);
 	}
+	
+	// Sobrescrever o método configure
+//	@Override
+//	protected SpringApplicationBuilder configure(SpringApplicationBuilder builder) {
+//		return builder.sources(ForumApplication.class);
+//	}
 
 }

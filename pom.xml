@@ -13,6 +13,9 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<name>forum</name>
 	<description>Demo project for Spring Boot</description>
+	
+	<!-- Deploy para arquivo WAR -->
+<!-- 	<packaging>war</packaging>  -->
 
 	<properties>
 		<java.version>1.8</java.version>
@@ -100,9 +103,18 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+		
+<!-- 		<dependency> -->
+<!-- 			<groupId>org.springframework.boot</groupId> -->
+<!-- 			<artifactId>spring-boot-starter-tomcat</artifactId> -->
+			<!-- Quando o maven for gerar o build do projeto, não inclua as bibliotecas do tomcat no WAR -->
+<!-- 			<scope>provided</scope>  -->
+<!-- 		</dependency> -->
+		
 	</dependencies>
 
 	<build>
+		<finalName>forum</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>

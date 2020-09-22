@@ -7,4 +7,4 @@ USER spring:spring
 # Cria um argumento que foi gerado dentro do target e colocar o nome do arquivo na variável de ambiente JAR_FILE
 ARG JAR_FILE=target/*.jar 
 COPY ${JAR_FILE} app.jar
-ENTRYPOINT ["java","-jar","/app.jar"]
+ENTRYPOINT ["java","-Xmx512m","-Dserver.port=${PORT}","-jar","/app.jar"]
